@@ -6,7 +6,7 @@
 /*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 23:52:29 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/04/08 00:39:40 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/04/09 22:35:16 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,11 @@ int	main (){
 			contact.add();
 			std::cout << "ADD: " << str << std::endl;
 		}
-		else if (str == "SEARCH" ) {
+		if (str == "SEARCH" ) {
 			std::cout << "SEARCH: " << str << std::endl;
 		}
-		else if (str == "EXIT" ){
-				std::cout << "BYE-BYE" << std::endl;
-			break;
+		if (str == "EXIT" ){
+				std::cout << "EXIT: " << str << std::endl;
 			}
 	}
 	return 0;
