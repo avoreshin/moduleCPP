@@ -23,11 +23,12 @@ int	main (){
 			contact.add();
 			std::cout << "ADD: " << str << std::endl;
 		}
-		if (str == "SEARCH" ) {
+		else if (str == "SEARCH" ) {
 			std::cout << "SEARCH: " << str << std::endl;
 		}
-		if (str == "EXIT" ){
-				std::cout << "EXIT: " << str << std::endl;
+		else if (str == "EXIT" ){
+				std::cout << "BYE-BYE" << std::endl;
+			break;
 			}
 	}
 	return 0;
