@@ -12,6 +12,11 @@
 
 #include "PhoneBook.hpp"
 
-void add(){
+void PhoneBook::add(){
 	std::cout << "ADD: " << std::endl;
+}
+
+void PhoneBook::search() {
+	
+	return Contact1;
 }
