@@ -15,12 +15,19 @@
 
 class Contact{
 public:
+	Contact();
+	~Contact(){};
+	void		setInfo();
+	void 		seeCap();
+	void 		checkPrintStr (std::string str);
+	void		checkPrintNum (std::int32_t num);
 	int			index;
 	std::string	first_name;
 	std::string	last_name;
 	std::string	nickname;
-	int			phone_number;
+
 private:
+	std::string	phone_number;
 	std::string	darkest_secret;
 };
 

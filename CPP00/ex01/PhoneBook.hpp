@@ -18,10 +18,15 @@
 
 class PhoneBook {
 public:
+	PhoneBook();
+	~PhoneBook() {};
+	int count;
 	Contact Contact1[8];
 	void add ();
 	void search ();
 	void exit();
+	
 };
+
 
 #endif

@@ -24,7 +24,7 @@ int	main (){
 			std::cout << "ADD: " << str << std::endl;
 		}
 		else if (str == "SEARCH" ) {
-			std::cout << "SEARCH: " << str << std::endl;
+				contact.search();
 		}
 		else if (str == "EXIT" ){
 				std::cout << "BYE-BYE" << std::endl;

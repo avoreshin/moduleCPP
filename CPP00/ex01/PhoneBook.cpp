@@ -12,11 +12,33 @@
 
 #include "PhoneBook.hpp"
 
-void PhoneBook::add(){
-	std::cout << "ADD: " << std::endl;
+PhoneBook::PhoneBook() {
+	count = 0;
 }
 
-void PhoneBook::search() {
+void PhoneBook::add(){
+	PhoneBook::Contact1[count].setInfo();
+	PhoneBook::Contact1[count].index = count + 1;
+	count += 1;
 	
-	return Contact1;
+//	for(int i = 0; count > i; i++){
+//		std::cout << i << ". " << PhoneBook::Contact1[i].first_name << std::endl;
+//	}
+}
+void PhoneBook::search() {
+	if(count > 0) {
+		PhoneBook::Contact1[0].seeCap();
+		for (int i = 0; count > i; i++) {
+			std::cout << "|";
+			Contact1[i].checkPrintNum(Contact1[i].index);
+			std::cout << "|";
+			Contact1[i].checkPrintStr(Contact1[i].first_name);
+			std::cout << "|";
+			Contact1[i].checkPrintStr(Contact1[i].last_name);
+			std::cout << "|";
+			Contact1[i].checkPrintStr(Contact1[i].nickname);
+			std::cout << "|" << std::endl;
+		}
+	}
+
 }
