@@ -21,11 +21,12 @@ public:
 	PhoneBook();
 	~PhoneBook() {};
 	int count;
+	int countplus;
 	Contact Contact1[8];
 	void add ();
 	void search ();
 	void exit();
-	
+	int checkInput(std::string);
 };
 
 

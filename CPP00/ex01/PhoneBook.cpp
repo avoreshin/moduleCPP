@@ -12,33 +12,59 @@
 
 #include "PhoneBook.hpp"
 
+int PhoneBook::checkInput(std::string str){
+	int num;
+	try{
+		num = std::stoi(str);
+	}
+	catch (std::invalid_argument e) {
+		std::cout << "Invalid input!!!" << std::endl;
+		return 0;
+	}
+	if (num > 8 || num < 1) {
+		
+		return 0;
+	}
+	return num;
+}
+
 PhoneBook::PhoneBook() {
 	count = 0;
+	countplus = 0;
 }
 
 void PhoneBook::add(){
+	std::cout << "Enter a contact: " << std::endl;
+	if (count == 8) {
+		count = 0;
+		countplus = 8;
+	}
 	PhoneBook::Contact1[count].setInfo();
 	PhoneBook::Contact1[count].index = count + 1;
 	count += 1;
-	
-//	for(int i = 0; count > i; i++){
-//		std::cout << i << ". " << PhoneBook::Contact1[i].first_name << std::endl;
-//	}
+	countplus++;
+	if (countplus > 8)
+		countplus = 8;
 }
 void PhoneBook::search() {
-	if(count > 0) {
-		PhoneBook::Contact1[0].seeCap();
-		for (int i = 0; count > i; i++) {
-			std::cout << "|";
-			Contact1[i].checkPrintNum(Contact1[i].index);
-			std::cout << "|";
-			Contact1[i].checkPrintStr(Contact1[i].first_name);
-			std::cout << "|";
-			Contact1[i].checkPrintStr(Contact1[i].last_name);
-			std::cout << "|";
-			Contact1[i].checkPrintStr(Contact1[i].nickname);
-			std::cout << "|" << std::endl;
-		}
+	int k;
+	std::string input;
+	if (count == 0) {
+		std::cout << "No contacts" << std::endl;
+		return ;
 	}
+		PhoneBook::Contact1[0].seeCap();
+		for (int i = 0; countplus > i; i++) {
+			Contact1[i].contactPrint(Contact1[i]);
+		}
+		std::cout << "Please enter index (1 - 8):";
+		std::cin >> input;
+		std::cin.ignore();
+		if ((k = PhoneBook::checkInput(input)) > count || k == 0){
+			std::cout << "No such index" << std::endl;
+			return ;
+		}
+		Contact1[k - 1].printSearch(Contact1[k - 1]);
+
 
 }
