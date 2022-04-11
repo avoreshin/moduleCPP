@@ -19,14 +19,16 @@ public:
 	~Contact(){};
 	void		setInfo();
 	void 		seeCap();
+	void 		contactPrint(Contact contact);
 	void 		checkPrintStr (std::string str);
 	void		checkPrintNum (std::int32_t num);
+	void		printSearch(Contact contact);
 	int			index;
+
+private:
 	std::string	first_name;
 	std::string	last_name;
 	std::string	nickname;
-
-private:
 	std::string	phone_number;
 	std::string	darkest_secret;
 };
