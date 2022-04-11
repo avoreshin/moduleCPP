@@ -15,21 +15,26 @@
 
 int	main (){
 	std::string str;
+	
 	PhoneBook contact;
+
 	while(1) {
+		std::cout << "\e[1;32m";
+		std::cout << "Available commands: ADD, SEARCH or EXIT" << std::endl;
 		std::getline(std::cin, str);
-		std::cout << "string: " << str << std::endl;
-		if (str == "ADD" ){
+		if (std::cin.eof())
+			exit (0);
+		if (str == "ADD" ) {
 			contact.add();
-			std::cout << "ADD: " << str << std::endl;
 		}
 		else if (str == "SEARCH" ) {
 				contact.search();
 		}
-		else if (str == "EXIT" ){
-				std::cout << "BYE-BYE" << std::endl;
+		else if (str == "EXIT" ) {
+			std::cout << "BYE-BYE" << std::endl;
 			break;
-			}
+		}
 	}
+	std::cout << "\e[0m";
 	return 0;
 }
