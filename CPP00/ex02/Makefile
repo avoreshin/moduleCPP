@@ -1,11 +1,11 @@
-SRCS			= Account.cpp test.cpp \
+SRCS			= tests.cpp Account.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= c++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -std=c++98
 
-NAME			= phonebook
+NAME			= tests
 
 all:			$(NAME)
 
