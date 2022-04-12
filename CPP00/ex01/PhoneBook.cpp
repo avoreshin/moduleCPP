@@ -60,11 +60,9 @@ void PhoneBook::search() {
 		std::cout << "Please enter index (1 - 8):";
 		std::cin >> input;
 		std::cin.ignore();
-		if ((k = PhoneBook::checkInput(input)) > count || k == 0){
+		if ((k = PhoneBook::checkInput(input)) > countplus || k == 0){
 			std::cout << "No such index" << std::endl;
 			return ;
 		}
 		Contact1[k - 1].printSearch(Contact1[k - 1]);
-
-
 }
