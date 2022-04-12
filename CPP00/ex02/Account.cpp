@@ -20,11 +20,14 @@ int	Account::_totalNbDeposits;
 int	Account::_totalNbWithdrawals;
 
 void	Account::_displayTimestamp( void ){
-	time_t seconds = time(NULL);
-	tm* timeinfo = localtime(&seconds);
-	std::cout<<"["<< timeinfo->tm_year + 1900 << timeinfo->tm_mon + 1
-	<< timeinfo->tm_mday << "_" << timeinfo->tm_hour
-	<< timeinfo->tm_min << timeinfo->tm_sec << "] ";
+	time_t		rawtime;
+	struct tm	*timeinfo;
+	char		buffer[19];
+	
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
+	strftime(buffer, 19, "[%Y%m%d_%H%M%S] ", timeinfo);
+	std::cout << buffer;
 }
 
 Account::Account( int initial_deposit ){
