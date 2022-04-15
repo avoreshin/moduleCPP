@@ -9,6 +9,8 @@
 /*   Updated: 2022/04/13 17:46:56 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
 #include <iostream>
 
@@ -24,3 +26,5 @@ private:
 };
 
 Zombie*    zombieHorde( int N, std::string name );
+
+#endif
