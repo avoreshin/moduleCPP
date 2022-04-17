@@ -6,11 +6,9 @@
 /*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 13:40:24 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/04/13 17:46:56 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/04/17 11:37:51 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
 
 #include <iostream>
 
@@ -26,5 +24,3 @@ private:
 };
 
 Zombie*    zombieHorde( int N, std::string name );
-
-#endif
