@@ -1,7 +1,7 @@
 SRCS			= main.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
-CXX				= c++
+CXX				= clang++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -std=c++98
 
@@ -20,5 +20,7 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
+test:			$(NAME)
+				./main text.txt Hello world
 
 .PHONY:			all clean fclean re%
