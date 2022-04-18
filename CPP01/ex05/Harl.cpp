@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/18 00:26:15 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/04/18 00:26:34 by jlamonic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Harl.hpp"
 #include <iostream>
@@ -9,26 +20,32 @@ void Harl::debug(void) {
 }
 
 void Harl::info(void) {
-
+	std::cout << "I cannot believe adding extra bacon costs "
+				 "more money. You didn’t put enough bacon in "
+				 "my burger! If you did, I wouldn’t be asking "
+				 "for more!"  << std::endl;
 }
 
 void Harl::warning(void) {
-
+	std::cout << "I think I deserve to have some extra bacon for "
+				 "free. I’ve been coming for years whereas you "
+				 "started working here since last month."
+				 << std::endl;
 }
 
 void Harl::error(void) {
-
+	std::cout <<"This is unacceptable! I want to speak to the manager now."
+			<< std::endl;
 }
 
 void Harl::complain(std::string level) {
-
-	switch (1) {
-		case (1):
-			this->debug();
-			break;
+	void (Harl::*foo[])(void) = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string levelIndex[] = {"debug", "info", "warning","error"};
+	for (int i = 0; i < 4; i++){
+		if(level == levelIndex[i])
+			(this->*foo[i])();
 	}
-
 }
 
-Harl::Harl() {};
+Harl::Harl(){};
 Harl::~Harl() {};

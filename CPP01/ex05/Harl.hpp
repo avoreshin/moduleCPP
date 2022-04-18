@@ -6,12 +6,12 @@
 /*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 23:02:51 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/04/17 23:07:26 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/04/17 23:08:43 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HARL_H
-#define HARL_H
+# define HARL_H
 
 #include <ostream>
 

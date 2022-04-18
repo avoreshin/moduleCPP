@@ -97,3 +97,21 @@ void    complain( std::string level );
 ```
 Цель этого упражнения - использовать указатели на функции-члены. Это не предложение. Harl должен жаловаться, не используя для этого целый строй if/else if/else. Он не думает дважды!
 Создайте и сдайте тесты, чтобы показать, что Harl жалуется часто. Вы можете использовать комментарии к примерам.
+
+###Exercise 06: Harl filter
+
+Иногда вы не хотите обращать внимание на все, что говорит Harl. Реализуйте систему фильтрации того, что говорит Харл, в зависимости от уровня журнала, который вы хотите прослушать.
+Создайте программу, которая принимает в качестве параметра один из четырех уровней. Она будет отображать все сообщения с этого уровня и выше. Например:
+```shell
+$> ./harlFilter "WARNING"
+[ WARNING ]
+I think I deserve to have some extra bacon for free.
+I've been coming for years whereas you started working here since last month.
+[ ERROR ]
+This is unacceptable, I want to speak to the manager now.
+$> ./harlFilter "I am not sure how tired I am today..."
+[ Probably complaining about insignificant problems ]
+```
+
+Хотя существует несколько способов борьбы с Harl, один из самых эффективных - SWITCH его.
+Дайте имя harlFilter вашему исполняемому файлу.
