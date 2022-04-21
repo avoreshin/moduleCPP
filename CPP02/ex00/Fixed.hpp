@@ -21,4 +21,4 @@ class Fixed
 
 std::ostream &			operator<<( std::ostream & o, Fixed const & i );
 
-#endif /* *********************************************************** FIXED_H */
+#endif

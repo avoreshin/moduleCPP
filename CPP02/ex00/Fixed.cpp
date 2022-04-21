@@ -1,9 +1,10 @@
 #include "Fixed.hpp"
 
+
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
-
+public:
 Fixed::Fixed()
 {
 }
@@ -11,7 +12,6 @@ Fixed::Fixed()
 Fixed::Fixed( const Fixed & src )
 {
 }
-
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
@@ -45,7 +45,12 @@ std::ostream &			operator<<( std::ostream & o, Fixed const & i )
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
+int getRawBits (void) const;
+void setRawBits(int const raw);
 
+private:
+    static const int kFractoonalBits = 8;
+    int value_;
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
