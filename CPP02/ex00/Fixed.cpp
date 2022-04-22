@@ -1,56 +1,37 @@
 #include "Fixed.hpp"
 
-
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
-public:
-Fixed::Fixed()
+Fixed::Fixed(void)
 {
+    std::cout << "Default constructor called" << std::endl;
+    this->_value = 0;
 }
 
-Fixed::Fixed( const Fixed & src )
-{
+Fixed::Fixed( const Fixed &fixed ) {
+    std::cout << "Copy constructor called" << std::endl;
+    *this = fixed;
 }
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
 
 Fixed::~Fixed()
 {
+    std::cout << "Destructor called" << std::endl;
 }
 
+Fixed& Fixed::operator=(const Fixed  &fixed ){
+    std::cout << "Copy assignment operator called" << std::endl;
+    _value = fixed.getRawBits();
+    return *this;
 
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
-
-Fixed &				Fixed::operator=( Fixed const & rhs )
-{
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, Fixed const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
+int Fixed::getRawBits() const {
+    std::cout << "getRawBits member function called" << std::endl;
+    return (this->_value);
 }
 
+void Fixed::setRawBits(const int raw) {
+    this->_value = raw;
+}
 
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-int getRawBits (void) const;
-void setRawBits(int const raw);
-
-private:
-    static const int kFractoonalBits = 8;
-    int value_;
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

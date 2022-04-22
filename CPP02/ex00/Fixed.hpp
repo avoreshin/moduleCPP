@@ -4,21 +4,18 @@
 # include <iostream>
 # include <string>
 
-class Fixed
-{
+class Fixed {
+public:
+   	Fixed(void);
+	Fixed( Fixed const &fixed );
+	Fixed &operator=( Fixed const &fixed );
+    ~Fixed(void);
+    int getRawBits( void ) const;
+    void setRawBits( int const raw );
 
-	public:
-
-		Fixed();
-		Fixed( Fixed const & src );
-		~Fixed();
-
-		Fixed &		operator=( Fixed const & rhs );
-
-	private:
-
+private:
+    int _value;
+    static const int _fractionalBits = 8;
 };
-
-std::ostream &			operator<<( std::ostream & o, Fixed const & i );
 
 #endif
