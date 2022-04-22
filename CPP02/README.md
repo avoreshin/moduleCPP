@@ -91,3 +91,66 @@ Destructor called
 $>
  
 ```
+
+###Exercise 01: Towards a more useful
+fixed-point number class
+
+The previous exercise was a good start but our class is pretty useless. It can only
+represent the value 0.0.
+Add the following public constructors and public member functions to your class:
+• A constructor that takes a constant integer as a parameter.
+It converts it to the corresponding fixed-point value. The fractional bits value is
+initialized to 8 like in exercise 00.
+• A constructor that takes a constant floating-point number as a parameter.
+It converts it to the corresponding fixed-point value. The fractional bits value is
+initialized to 8 like in exercise 00.
+• A member function float toFloat( void ) const;
+that converts the fixed-point value to a floating-point value.
+• A member function int toInt( void ) const;
+that converts the fixed-point value to an integer value.
+And add the following function to the Fixed class files:
+• An overload of the insertion («) operator that inserts a floating-point representation
+of the fixed-point number into the output stream object passed as parameter.
+
+редыдущее упражнение было хорошим началом, но наш класс довольно бесполезен. Он может только
+представлять значение 0,0.
+Добавьте в класс следующие публичные конструкторы и публичные функции-члены:
+- Конструктор, который принимает в качестве параметра целое число.
+  Он преобразует его в соответствующее значение с фиксированной точкой. Значение дробных битов
+  инициализируется 8, как в упражнении 00.
+- Конструктор, принимающий в качестве параметра постоянное число с плавающей точкой.
+  Он преобразует его в соответствующее значение с фиксированной точкой. Значение дробных битов
+  инициализируется на 8, как в упражнении 00.
+- Функция-член float toFloat( void ) const;
+  которая преобразует значение с фиксированной точкой в значение с плавающей точкой.
+- Функция-член int toInt( void ) const;
+  которая преобразует значение с фиксированной точкой в целочисленное значение.
+  И добавьте следующую функцию в файлы класса Fixed:
+- Перегрузка оператора insertion ("), который вставляет представление с плавающей точкой
+  числа с фиксированной точкой в объект выходного потока, переданный в качестве параметра.
+
+```shell
+$> ./a.out
+Default constructor called
+Int constructor called
+Float constructor called
+Copy constructor called
+Copy assignment operator called
+Float constructor called
+Copy assignment operator called
+Destructor called
+a is 1234.43
+b is 10
+c is 42.4219
+d is 10
+a is 1234 as integer
+b is 10 as integer
+c is 42 as integer
+d is 10 as integer
+Destructor called
+Destructor called
+Destructor called
+Destructor called
+$>
+```
+
