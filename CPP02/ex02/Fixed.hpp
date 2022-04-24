@@ -6,13 +6,15 @@
 /*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 23:07:42 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/04/23 23:07:48 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/04/24 11:19:32 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
+#include <iostream>
+#include <math.h>
 
 class Fixed {
 
@@ -38,22 +40,23 @@ public:
 
 	Fixed &operator++(void);
 	Fixed &operator--(void);
-	Fixed operator++(void);
-	Fixed operator--(void);
+	Fixed operator++(int);
+	Fixed operator--(int);
 
-	static const Fixed &max(Fixed &f1, Fixed &f2);
-	static const Fixed &max(const Fixed &f1, const Fixed &f2);
-	static const Fixed &min(Fixed &f1, Fixed &f2);
-	static const Fixed &min(const Fixed &f1, const Fixed &f2);
+//	static const Fixed &max(Fixed &f1, Fixed &f2);
+//	static const Fixed &max(const Fixed &f1, const Fixed &f2);
+//	static const Fixed &min(Fixed &f1, Fixed &f2);
+//	static const Fixed &min(const Fixed &f1, const Fixed &f2);
 
 	int getRawBits(void) const;
+
 	void setRawBits(int const raw);
 
 	float toFloat(void) const;
 	int toInt(void) const;
 
 private:
-	static const int _fractionalBits;
+	static const int _fractionalBits = 8;
 	int _value;
 };
 

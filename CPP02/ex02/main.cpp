@@ -6,7 +6,7 @@
 /*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 23:07:58 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/04/23 23:12:39 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/04/24 10:56:38 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main( void ) {
   std::cout << a << std::endl;
   std::cout << b << std::endl;
 
-  std::cout << Fixed::max( a, b ) << std::endl;
+//  std::cout << Fixed::max( a, b ) << std::endl;
 
   return 0;
 }
