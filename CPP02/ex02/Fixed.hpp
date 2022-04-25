@@ -6,7 +6,7 @@
 /*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 23:07:42 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/04/24 11:19:32 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/04/25 11:19:32 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ public:
 	Fixed operator++(int);
 	Fixed operator--(int);
 
-//	static const Fixed &max(Fixed &f1, Fixed &f2);
-//	static const Fixed &max(const Fixed &f1, const Fixed &f2);
-//	static const Fixed &min(Fixed &f1, Fixed &f2);
-//	static const Fixed &min(const Fixed &f1, const Fixed &f2);
+	static const Fixed &max(Fixed &f1, Fixed &f2);
+	static const Fixed &max(const Fixed &f1, const Fixed &f2);
+	static const Fixed &min(Fixed &f1, Fixed &f2);
+	static const Fixed &min(const Fixed &f1, const Fixed &f2);
 
 	int getRawBits(void) const;
 
