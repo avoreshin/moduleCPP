@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.19)
+project(moduleCPP)
+
+set(CMAKE_CXX_STANDARD 98)
+
+include_directories(CCP02/ex03)
+
+add_executable(moduleCPP
+        CPP02/ex03/Bsp.cpp
+        CPP02/ex03/Bsp.hpp
+        CPP02/ex03/Fixed.cpp
+        CPP02/ex03/Fixed.hpp
+        CPP02/ex03/Point.cpp
+        CPP02/ex03/Point.hpp
+        CPP02/ex03/Fixed.cpp
+        CPP02/ex03/main.cpp
+        CPP02/ex03/Makefile
+        )

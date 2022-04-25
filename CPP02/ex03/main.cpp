@@ -12,16 +12,13 @@
 
 #include <iostream>
 
-#include "Fixed.hpp"
 #include "Point.hpp"
 #include "Bsp.hpp"
 
 int main (void)
 {
 	std::cout.setf(std::ios::boolalpha);
-	std::cout << bsp::bsp(Point(0.0f, 0.0f), Point(0.0f, 10.0f), Point(10.0f, 0.0f),
-						  Point(2.0f, 2.0f))
-			  << std::endl; // false
+	
 	std::cout << bsp::bsp(Point(0.0f, 0.0f), Point(0.0f, 1.0f), Point(1.0f, 0.0f),
 						  Point(0.0f, 0.0f))
 			  << std::endl; // false
