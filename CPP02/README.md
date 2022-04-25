@@ -154,3 +154,114 @@ Destructor called
 $>
 ```
 
+###Exercise 02: Now we’re talking
+
+Add public member functions to your class to overload the following operators:
+• The 6 comparison operators: >, <, >=, <=, == and !=.
+• The 4 arithmetic operators: +, -, *, and /.
+• The 4 increment/decrement (pre-increment and post-increment, pre-decrement and
+post-decrement) operators, that will increase or decrease the fixed-point value from
+the smallest representable  such as 1 +  > 1.
+Add these four public overloaded member functions to your class:
+• A static member function min that takes as parameters two references on fixed-point
+numbers, and returns a reference to the smallest one.
+• A static member function min that takes as parameters two references to constant
+fixed-point numbers, and returns a reference to the smallest one.
+• A static member function max that takes as parameters two references on fixed-point
+numbers, and returns a reference to the greatest one.
+• A static member function max that takes as parameters two references to constant
+fixed-point numbers, and returns a reference to the greatest one.
+
+Добавьте в свой класс функции-члены public, чтобы перегрузить следующие операторы:
+- 6 операторов сравнения: >, <, >=, <=, == и !=.
+- 4 арифметических оператора: +, -, * и /.
+- 4 оператора увеличения/уменьшения (пре-инкремент и пост-инкремент, пре-декремент и
+  пост-декремент) операторов, которые увеличивают или уменьшают значение с фиксированной точкой от
+  наименьшего представляемого, например, 1 + > 1.
+  Добавьте эти четыре публичные перегруженные функции-члена в ваш класс:
+- Статическая функция-член min, которая принимает в качестве параметров две ссылки на числа с фиксированной точкой
+  и возвращает ссылку на наименьшее из них.
+- Статическая функция-член min, которая принимает в качестве параметров две ссылки на постоянные
+  с фиксированной точкой, и возвращает ссылку на наименьшее из них.
+- Статическая функция-член max, которая принимает в качестве параметров две ссылки на числа с фиксированной точкой
+  и возвращает ссылку на наибольшее из них.
+- Статическая функция-член max, принимающая в качестве параметров две ссылки на постоянные числа с фиксированной точкой и возвращающая ссылку на наибольшее из них.
+  числа с фиксированной точкой и возвращает ссылку на наибольшее из них.
+
+Should output something like (for greater readability, the constructor/destructor messages are removed in the example below):
+
+```shell
+$> ./a.out
+0
+0.00390625
+0.00390625
+0.00390625
+0.0078125
+10.1016
+10.1016
+$>
+
+```
+###Exercise 03: BSP
+```textmate
+Files to turn in : Makefile, main.cpp, Fixed.{h, hpp}, Fixed.cpp,
+Point.{h, hpp}, Point.cpp, bsp.cpp
+
+Allowed functions : roundf (from <cmath>)
+```
+
+Now that you have a functional Fixed class, it would be nice to use it.
+Implement a function which indicates whether a point is inside of a triangle or not.
+Very useful, isn’t it?
+
+Теперь, когда у вас есть функциональный класс Fixed, было бы неплохо его использовать.
+Реализуйте функцию, которая показывает, находится ли точка внутри треугольника или нет.
+Очень полезно, не правда ли?
+
+```textmate
+BSP расшифровывается как Binary space partitioning. Пожалуйста. :)
+```
+
+Let’s start by creating the class Point in Orthodox Canonical Form that represents
+a 2D point:
+• Private members:
+◦ A Fixed const attribute x.
+◦ A Fixed const attribute y.
+◦ Anything else useful.
+• Public members:
+◦ A default constructor that initializes x and y to 0.
+◦ A constructor that takes as parameters two constant floating-point numbers.
+It initializes x and y with those parameters.
+◦ A copy constructor.
+◦ A copy assignment operator overload.
+◦ A destructor.
+◦ Anything else useful.
+To conclude, implement the following function in the appropriate file:
+bool bsp( Point const a, Point const b, Point const c, Point const point);
+• a, b, c: The vertices of our beloved triangle.
+• point: The point to check.
+• Returns: True if the point is inside the triangle. False otherwise.
+Thus, if the point is a vertex or on edge, it will return False.
+Implement and turn in your own tests to ensure that your class behaves as expected.
+
+Давайте начнем с создания класса Point в ортодоксальной канонической форме, который представляет
+двумерную точку:
+- Частные члены:
+  ◦ Фиксированный постоянный атрибут x.
+  ◦ Фиксированный постоянный атрибут y.
+  ◦ Все остальное полезное.
+- Публичные члены:
+  ◦ Конструктор по умолчанию, который инициализирует x и y в 0.
+  ◦ Конструктор, принимающий в качестве параметров два постоянных числа с плавающей точкой.
+  Он инициализирует x и y этими параметрами.
+  ◦ Конструктор копирования.
+  ◦ Перегрузка оператора присваивания копии.
+  ◦ Деструктор.
+  ◦ Все остальное.
+  В заключение реализуйте следующую функцию в соответствующем файле:
+  bool bsp( Point const a, Point const b, Point const c, Point const point);
+- a, b, c: Вершины нашего любимого треугольника.
+- точка: Точка для проверки.
+- Возвращает: True, если точка находится внутри треугольника. Ложь в противном случае.
+  Таким образом, если точка является вершиной или ребром, возвращается False.
+  Реализуйте и сдайте собственные тесты, чтобы убедиться, что ваш класс ведет себя так, как ожидается.
