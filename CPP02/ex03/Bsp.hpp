@@ -1,14 +1,22 @@
-//
-// Created by Jesica Lamonica on 4/25/22.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bsp.hpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/25 18:01:22 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/04/25 18:01:26 by jlamonic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#ifndef MODULECPP_BSP_HPP
-#define MODULECPP_BSP_HPP
+#ifndef BSP_HPP
+# define BSP_HPP
 
+#include "Point.hpp"
 
-class Bsp {
+namespace bsp {
+	bool bsp(Point const a, Point const b, Point const c, Point const point);
+}
 
-};
-
-
-#endif //MODULECPP_BSP_HPP
+#endif
