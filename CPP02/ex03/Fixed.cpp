@@ -11,20 +11,22 @@
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <iostream>
+#include <math.h>
 
-Fixed::Fixed(void) {
+Fixed::Fixed(void): _value(0) {
 //	std::cout << "Default constructor called" << std::endl;
-	this->_value = 0;
 };
 
-Fixed::Fixed(const int value) {
+Fixed::Fixed(const int value){
 //	std::cout << "Int constructor called" << std::endl;
 	this->_value = value << _fractionalBits;
 }
 
-Fixed::Fixed(const float value) {
+Fixed::Fixed(const float value)
+:_value(roundf(value * (1 << _fractionalBits)))
+{
 //	std::cout << "Float constructor called" << std::endl;
-	this->_value = (int)(roundf(value * (1 << this->_fractionalBits)));
 }
 
 Fixed::Fixed(const Fixed &fixed) {
@@ -67,9 +69,17 @@ Fixed Fixed::operator+(const Fixed &fixed) const{
 }
 
 Fixed Fixed::operator-(const Fixed &fixed) const{
-	return Fixed(toFloat()-fixed.toFloat());
+	Fixed f;
+	f.setRawBits(_value - fixed._value);
+	return f;
 }
 
+Fixed Fixed::operator-(void) {
+	Fixed fixed;
+
+	fixed.setRawBits(-_value);
+	return fixed;
+}
 Fixed Fixed::operator*(const Fixed &fixed) const{
 	return Fixed(toFloat()*fixed.toFloat());
 }

@@ -14,6 +14,7 @@
 # define FIXED_HPP
 
 #include <iostream>
+#include <ostream>
 #include <math.h>
 
 class Fixed {
@@ -35,6 +36,7 @@ public:
 
 	Fixed operator+(const Fixed &fixed) const;
 	Fixed operator-(const Fixed &fixed) const;
+	Fixed operator-(void);
 	Fixed operator*(const Fixed &fixed) const;
 	Fixed operator/(const Fixed &fixed) const;
 
@@ -49,7 +51,6 @@ public:
 	static const Fixed &min(const Fixed &f1, const Fixed &f2);
 
 	int getRawBits(void) const;
-
 	void setRawBits(int const raw);
 
 	float toFloat(void) const;
