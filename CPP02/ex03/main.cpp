@@ -18,7 +18,9 @@
 int main (void)
 {
 	std::cout.setf(std::ios::boolalpha);
-	
+	std::cout << bsp::bsp(Point(0.0f, 0.0f), Point(0.0f, 10.0f), Point(100.0f, 0.0f),
+						  Point(25.0f, 25.0f))
+			  << std::endl; // false
 	std::cout << bsp::bsp(Point(0.0f, 0.0f), Point(0.0f, 1.0f), Point(1.0f, 0.0f),
 						  Point(0.0f, 0.0f))
 			  << std::endl; // false
@@ -32,7 +34,6 @@ int main (void)
 						  Point(1.0f, 1.0f))
 			  << std::endl; // false
 	return 0;
-
 }
 
 

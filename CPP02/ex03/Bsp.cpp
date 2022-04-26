@@ -21,11 +21,12 @@ namespace bsp {
 	
 	bool bsp(Point const a, Point const b, Point const c, Point const point){
 	Fixed den = crossP(b - a,c - a);
-	if (den == 0) {
+ 	if (den == 0) {
 		return (false);
 	}
 	Fixed m = (crossP(point - a, c - a) / den);
 	Fixed n = -(crossP(point - a, b - a) / den);
+//	std::cout << "M: " << m << " N: "  << n;
 		return (m > 0 && m < 1 && n > 0 && n < 1 && m + n < 1);
 	}
 }

@@ -144,4 +144,3 @@ const Fixed &Fixed::min(Fixed &f1, Fixed &f2) {
 const Fixed &Fixed::min(const Fixed &f1, const Fixed &f2) {
 	return f1 < f2 ? f1 : f2;
 }
-
