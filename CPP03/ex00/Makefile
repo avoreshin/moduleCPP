@@ -17,7 +17,7 @@ CXX				= clang++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -std=c++98
 
-NAME			= fixed
+NAME			= claptrap
 
 all:			$(NAME)
 

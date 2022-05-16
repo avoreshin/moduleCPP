@@ -30,4 +30,5 @@ int main (void) {
     fanzil.beRepaired(40);
     fanzil.guardGate();
 
+    return (0);
 }

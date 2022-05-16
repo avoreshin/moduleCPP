@@ -6,7 +6,7 @@
 /*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 23:02:10 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/04/24 09:17:24 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/05/16 17:46:34 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,32 +23,32 @@
 # define END "\033[0m"
 
 #include <iostream>
-//#include <string>
 
-class ClapTrap {
+#include <iostream>
 
-public:
+class ClapTrap
+{
 
-    ClapTrap(const std::string& name);
-    ClapTrap(const ClapTrap &src);
-    ~ClapTrap();
-    ClapTrap& operator = (ClapTrap const &rhs);
+    public:
 
-    void attack (const std::string& target);
-    void takeDamage(unsigned int amount);
-    void beRepaired(unsigned int amount);
+        ClapTrap();
 
-private:
+        ClapTrap(const std::string name);
+        ClapTrap &operator=(const ClapTrap &type);
+        ClapTrap(const ClapTrap &type);
+        ~ClapTrap();
 
-    ClapTrap();
+    void	attack(const std::string& target);
+    void	takeDamage(unsigned int amount);
+    void	beRepaired(unsigned int amount);
 
-    std::string _name;
-    unsigned int _hitPoints;
-    unsigned int _enemyPoints;
-    unsigned int _attackDamage;
+    protected:
+        std::string name;
+        int			hit_points;
+        int			energy_points;
+        int			attack_damage;
+    ClapTrap(const std::string name_s, int hit_points_s, int energy_points_s, int attack_damage_s);
 
 };
 
-std::ostream & operator<<(std::ostream &o, ClapTrap const &rhs);
-
-#endif //CLAPTRAP_HPP
+#endif /* ******************************************************** CLAPTRAP_H */
