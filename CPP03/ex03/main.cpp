@@ -13,6 +13,7 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main (void) {
     std::cout << BLUE
@@ -64,6 +65,14 @@ int main (void) {
     misha.beRepaired(1024);
     misha.highFivesGuys();
 
+    std::cout << BLUE
+              <<"__________________________________________________________________" << std::endl;
+    std::cout << "_____________________________DiamondTrap__________________________" << std::endl;
+    std::cout << "__________________________________________________________________"
+              << END
+              << std::endl;
+    DiamondTrap taras ("Taras");
+    taras.whoAmI();
     std::cout << GRAY
               <<"__________________________________________________________________" << std::endl;
     std::cout << "_________________________destructor_______________________________" << std::endl;
