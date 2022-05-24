@@ -15,4 +15,4 @@ add_executable(moduleCPP
         CPP02/ex03/Fixed.cpp
         CPP02/ex03/main.cpp
         CPP02/ex03/Makefile
-        CPP03/ex00/ClapTrap.cpp CPP03/ex00/ClapTrap.hpp CPP03/ex01/ScavTrap.cpp CPP03/ex01/ScavTrap.hpp)
+        CPP03/ex00/ClapTrap.cpp CPP03/ex00/ClapTrap.hpp CPP03/ex01/ScavTrap.cpp CPP03/ex01/ScavTrap.hpp CPP04/ex00/WrongAnimal.cpp CPP04/ex00/WrongAnimal.hpp CPP04/ex00/WrongCat.cpp CPP04/ex00/WrongCat.hpp)
