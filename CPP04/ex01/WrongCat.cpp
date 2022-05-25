@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/24 18:39:19 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/05/24 18:41:52 by jlamonic         ###   ########.fr       */
+/*   Created: 2022/05/25 17:07:32 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/05/25 17:07:34 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ WrongCat::~WrongCat() {
     std::cout << "Destructor called! (WrongCat)" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat &src) : WrongAnimal(src._type) {
+WrongCat::WrongCat(const WrongCat &WC) : WrongAnimal(WC._type) {
     std::cout << "Copy constructor called! (WrongCat)" << std::endl;
 }
 
-WrongCat &WrongCat::operator=(const WrongCat &rhs) {
+WrongCat &WrongCat::operator=(const WrongCat &WC) {
     std::cout << "Assigned operation called! (WrongCat)" << std::endl;
-    this->_type = rhs._type;
+    this->_type = WC._type;
     return *this;
 }
 

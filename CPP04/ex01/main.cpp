@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/24 18:38:51 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/05/24 18:41:52 by jlamonic         ###   ########.fr       */
+/*   Created: 2022/05/25 17:07:17 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/05/25 17:07:20 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 #include "Brain.hpp"
+
 
 int main()
 {

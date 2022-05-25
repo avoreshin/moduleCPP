@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/24 18:38:31 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/05/24 18:41:52 by jlamonic         ###   ########.fr       */
+/*   Created: 2022/05/25 17:06:59 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/05/25 17:07:02 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 
 class Cat : public Animal{
 private:
-    Brain * _brain;
+    Brain   *_brain;
 public:
     Cat();
     virtual ~Cat();
-    Cat &operator=(const Cat &rhs);
-    Cat(const Cat &src);
+    Cat &operator=(const Cat &C);
+    Cat(const Cat &C);
 
     virtual void makeSound() const;
 };

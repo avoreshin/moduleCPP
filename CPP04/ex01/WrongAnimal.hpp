@@ -5,14 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/24 18:39:12 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/05/24 18:41:52 by jlamonic         ###   ########.fr       */
+/*   Created: 2022/05/25 17:07:28 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/05/25 17:07:30 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONGANIMAL_HPP
 #define WRONGANIMAL_HPP
-
 #include <iostream>
 
 class WrongAnimal {
@@ -22,12 +21,11 @@ public:
     WrongAnimal();
     WrongAnimal(const std::string &type);
     virtual ~WrongAnimal();
-    WrongAnimal(const WrongAnimal &src);
-    WrongAnimal& operator=(const WrongAnimal &rhs);
+    WrongAnimal(const WrongAnimal &WA);
+    WrongAnimal& operator=(const WrongAnimal &WA);
     const std::string &getType() const;
-    static void makeSound() ;
+    void makeSound() const;
 };
 
 
-
-#endif//WRONGANIMAL_HPP
+#endif
