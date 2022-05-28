@@ -1,28 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Intern.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/28 16:32:25 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/05/28 16:38:10 by jlamonic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Intern.hpp"
 
-Intern::Intern()
-{
-
+Intern::Intern(){
 }
 
-Intern::Intern(const Intern &form)
-{
+Intern::Intern(const Intern &form){
     *this = form;
 }
 
-Intern::~Intern()
-{
+Intern::~Intern(){
 
 }
 
-Intern &Intern::operator=(const Intern &intern)
-{
+Intern &Intern::operator=(const Intern &intern){
     (void)intern;
     return *this;
 }
 
-Form *Intern::makeForm(std::string form, std::string target)
-{
+Form *Intern::makeForm(std::string form, std::string target){
     Form *result = NULL;
 
     Form *forms[] = {
@@ -51,5 +57,4 @@ Form *Intern::makeForm(std::string form, std::string target)
         std::cout << "Intern creates " << result->getName() << std::endl;
 
     return result;
-
 }

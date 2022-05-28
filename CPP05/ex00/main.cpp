@@ -1,23 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/28 16:30:09 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/05/28 16:30:26 by jlamonic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 
 int	main(void)
 {
     {
-        Bureaucrat Vova("Vova", 25);
-        std::cout << "name: " << Vova.getName() << std::endl;
-        std::cout << "grade: " << Vova.getGrade() << std::endl;
-        std::cout << Vova << "\n";
-        Vova.decrementGraide();
-        std::cout << RED << "decrementGraide() -> " << Vova << std::endl;
-        Vova.incrementGraide();
-        std::cout << "incrementGraide() -> " << Vova << DEFAULT << std::endl;
+        Bureaucrat Angelina("Angelina", 22);
+        std::cout << "name: " << Angelina.getName() << std::endl;
+        std::cout << "grade: " << Angelina.getGrade() << std::endl;
+        std::cout << Angelina << "\n";
+        Angelina.decrementGraide();
+        std::cout << "decrementGraide() -> " << Angelina << std::endl;
+        Angelina.incrementGraide();
+        std::cout << "incrementGraide() -> " << Angelina  << std::endl;
 
     }
     std::cout << "--------1----------" << std::endl;
     {
         try
         {
-            Bureaucrat a("Oleg", 0);
+            Bureaucrat a("ANDREY", 0);
         }
         catch (std::exception &e)
         {
@@ -28,7 +40,7 @@ int	main(void)
     {
         try
         {
-            Bureaucrat a("Oleg", 151);
+            Bureaucrat a("ANDREY", 151);
         }
         catch (std::exception &e)
         {
@@ -39,7 +51,7 @@ int	main(void)
     {
         try
         {
-            Bureaucrat a("Oleg", 1);
+            Bureaucrat a("ANDREY", 1);
             a.incrementGraide();
         }
         catch (std::exception &e)
@@ -51,7 +63,7 @@ int	main(void)
     {
         try
         {
-            Bureaucrat a("Oleg", 150);
+            Bureaucrat a("ANDREY", 150);
             a.decrementGraide();
         }
         catch (std::exception &e)

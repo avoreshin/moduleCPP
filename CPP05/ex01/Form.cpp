@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/28 16:35:50 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/05/28 16:36:19 by jlamonic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Form.hpp"
 
 Form::Form() {}
@@ -13,8 +25,6 @@ Form::Form(const std::string &name, const int gradeToSign, const int gradeToExec
         throw Form::GradeTooLowException();
     this->is_signed = false;
 }
-
-
 
 Form::~Form() {}
 

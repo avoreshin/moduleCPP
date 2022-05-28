@@ -6,11 +6,13 @@
 #    By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/23 23:05:16 by jlamonic          #+#    #+#              #
-#    Updated: 2022/05/28 16:36:32 by jlamonic         ###   ########.fr        #
+#    Updated: 2022/05/28 16:38:21 by jlamonic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp Bureaucrat.cpp Form.cpp
+SRCS			= main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp \
+				RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
+
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++

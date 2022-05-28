@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlamonic <jlamonic@student.21-school.ru    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/28 16:33:41 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/05/28 16:33:53 by jlamonic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PRESIDENTIALPARDONFORM_HPP
 #define PRESIDENTIALPARDONFORM_HPP
-
 
 #include "Form.hpp"
 
@@ -17,6 +28,5 @@ public:
     std::string getTarget() const;
     virtual void execute(Bureaucrat const &executor) const;
 };
-
 
 #endif
